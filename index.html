@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <!-- Da série de coisas curiosas do @heyalbqrq
+            http://twitter.com/heyalbqrq 👾 -->
+
+    <meta charset="UTF-8" />
+    <title>escreve/apaga - seu bloco de notas descomplicado 🗒️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Wash Albuquerque" />
+    <meta
+      name="description"
+      content="escreveapa.ga é um bloco de notas online simples e descomplicado. Ele salva seu texto no navegador e também permite download .txt."
+    />
+    <!-- Folha de Estilos -->
+    <link
+      rel="stylesheet"
+      href="/style.css"
+      type="text/css"
+      media="screen, projection"
+    />
+
+    <!-- Arquivos Javascript -->
+    <script src="/script.js" defer></script>
+    <!--link rel="stylesheet" href="./script.js" /-->
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.com/2d4727a5-9f71-46cf-a75b-944ac5e30ff1%2FAtivo%2017.png?v=1618420220881"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.com/2d4727a5-9f71-46cf-a75b-944ac5e30ff1%2FAtivo%2017.png?v=1618420220881"
+      sizes="16x16"
+    />
+
+    <!-- Google tag (gtag.js) 
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-L8QG7XDCQ5"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-L8QG7XDCQ5");
+    </script>
+ Fim - Script Google Analytics! -->
+
+    <!-- SSL Protocol Config -->
+    <script>
+      if (location.protocol != "https:") {
+        location.href =
+          "https:" +
+          window.location.href.substring(window.location.protocol.length);
+      }
+    </script>
+  </head>
+
+  <!-- Hey u!
+▒▒▒▒▒▒▒█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+▒▒▒▒▒▒▒█░▒▒▒▒▒▒▒▓▒▒▓▒▒▒▒▒▒▒░█
+▒▒▒▒▒▒▒█░▒▒▓▒▒▒▒▒▒▒▒▒▄▄▒▓▒▒░█░▄▄
+▒▒▄▀▀▄▄█░▒▒▒▒▒▒▓▒▒▒▒█░░▀▄▄▄▄▄▀░░█
+▒▒█░░░░█░▒▒▒▒▒▒▒▒▒▒▒█░░░░░░░░░░░█
+▒▒▒▀▀▄▄█░▒▒▒▒▓▒▒▒▓▒█░░░█▒░░░░█▒░░█
+▒▒▒▒▒▒▒█░▒▓▒▒▒▒▓▒▒▒█░░░░░░░▀░░░░░█
+▒▒▒▒▒▄▄█░▒▒▒▓▒▒▒▒▒▒▒█░░█▄▄█▄▄█░░█
+▒▒▒▒█░░░█▄▄▄▄▄▄▄▄▄▄█░█▄▄▄▄▄▄▄▄▄█
+▒▒▒▒█▄▄█░░█▄▄█░░░░░░█▄▄█░░█▄▄█
+  -->
+
+  <!-- Código Saver // Início-->
+  <script type="text/javascript" src="FileSaver.js"></script>
+
+  <!-- função ao clicar em salvar -->
+  <script>
+    function salvar() {
+      let texto = document.getElementById("notepad").value;
+      let titulo = document.getElementById("titulo").value;
+      var blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
+      saveAs(blob, titulo + ".txt");
+    }
+  </script>
+  <!-- Código Saver // Final -->
+
+  <!-- Mais do que um experimento p/ ser divertido, 
+  o #escreve/apaga também é uma ferramenta para aqueles momentos de necessidade,
+  afinal, ninguém merece esperar o word abrir, não é? -->
+
+  <!-- Corpo // Início-->
+  <body>
+    <div class="header">
+      <center>
+        Esse é o escreveapa.ga. Seu bloco de notas descomplicado 🗒️.
+      </center>
+    </div>
+    <br />
+
+    <!-- Título // Início-->
+    <input
+      type="text"
+      id="titulo"
+      class="titulo"
+      placeholder="comece pelo título ☕"
+      title="só pra ficar mais cool quando salvar 😎"
+    />
+    <!-- Título // Final-->
+
+    <!-- Texto // Início-->
+    <div>
+      <textarea
+        input="texto"
+        id="notepad"
+        onkeyup="charcountupdate(this.value)"
+        class="notepad"
+        placeholder="este é um espaço simples pra vc rascunhar e fazer anotações rápidas 📋 pode começar a digitar e pode não se preocupe, se você fechar a página sem querer ou precisar sair rapidinho, guardo tudinho aqui até você voltar 🤗"
+      ></textarea>
+
+      <!-- Contador de Caracteres -->
+      <byline>Palavras: <span id="words">0</span> | 
+        Caracteres: <span id="characters">0</span></byline>
+
+
+    <!-- Emoji Rain -->
+    <center>
+      <button class="showButton show" title="supresa! clica clica clica 😎">
+        Emoji Rain 👇
+      </button>
+      <button class="hideButton hidden">Copie, cole e esconda 👆</button>
+      <div class="hidden">
+        <center>
+          😘😄😢😝👻🙈🙉🙊👶👦👧👾🤖💩 🙆💁👼🛀🏄🚴💪💏✌👍👊
+          🙏👅💖💋💥💦💨👙👑💎🐼🐰🐘 🐬🌻🍕🍰🍫🍬🍭☕🍸🍻
+          🌏🌋🗼🗽⛺🌃🌆🌉🚗🚚⛽🚢🚀🚽🌛 🌚🌟🌞🌂☔⛄🔥⚡🎆🎇✨🎈🎉🎊🎋🎍
+          🎏🎀🎁🏆⚽🏀🏈🎲🎮🎱📢🔊🔇🔔🔕 🎵🎤🎧🎷📱🔌🎥📷📺🔎💡🔦📕📚💰💵 🍇 🍈
+          🍉 🍊 🍌 🍍 🍎 🍏 🍑 🍒 🍓🧊
+        </center>
+      </div>
+      <!-- Script // Botão Salvar-->
+      <center>
+        <button
+          id="btn"
+          onclick="salvar()"
+          title="chegamos aqui juntos agora me guarde com carinho 💖"
+        >
+          clique aqui p/ salvar 💾
+        </button>
+      </center>
+
+      <!-- <center>
+        <input
+          type="button"
+          value=" Reset 👻 "
+          id="reset"
+          title="cuidado pra não me apagar sem querer! 😱"
+        />
+      </center> -->
+
+      <!-- Rodapé -->
+      <div class="footer">
+        <p style="text-align: center">
+          <!-- Eu aqui👾 -->
+
+          With ❤️ by
+          <a href="https://heyalbqrq.glitch.me" title="wash aqui!">👾</a><br />
+          <a href="https://twitter.com/heyalbqrq">Twitter</a> |
+          <a href="https://github.com/heyalbqrq/escreveapaga">GitHub</a>
+        </p>
+
+        <br />
+
+        <!-- /// -->
+
+        <!-- Script .btn -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Script React -->
+        <script>
+          $(function () {
+            $(".showButton").click(function () {
+              $(".hidden").show();
+              $(".show").hide();
+            });
+            $(".hideButton").click(function () {
+              $(".hidden").hide();
+              $(".show").show();
+            });
+          });
+        </script>
+      </div>
+      <!-- Fecha React -->
+
+      <!-- Load autosave.js -->
+      <script src="./autosave.js"></script>
+
+      <!-- Corpo // Final-->
+    </center>
+  </body>
+</html>
