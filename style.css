@@ -1,0 +1,203 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Lato;
+  src: url("https://fonts.googleapis.com/css?family=Lato");
+}
+
+/* ----- #LatoLovers! -----*/
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: none;
+  font: inherit;
+}
+
+html {
+  font: 100%/1.68 var(--font);
+  background-color: var(--white);
+  color: var(--txt);
+  transition: 0.2s ease;
+
+  --font: "Lato", sans-serif;
+  --white: #ffffff;
+  --grey: #222222;
+  --head-txt: 16px;
+  --body-txt: 16px;
+  --btn-txt: 14px;
+}
+
+body {
+  font-family: var(--font);
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+
+byline {
+  font-family: var(--font);
+  font-size: 12px;
+  color: var(--grey);
+}
+
+/* ----- Título -----*/
+
+.header {
+  font-family: var(--font);
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+#titulo {
+  display: inline;
+  font-size: 16px;
+  width: 100%;
+  padding: 0px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0.6px 0.6px 0.6px 0.6px rgba(68, 68, 68, 0.1);
+}
+
+/* ----- Título Config-----*/
+
+.pad {
+  font-family: var(--font);
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ----- Corpo Config -----*/
+
+.notepad {
+  font-family: var(--font);
+  display: relative;
+  font-size: var(--body-txt);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(80vh - 6rem);
+  appearance: none;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0.6px 0.6px 0px 0px rgba(68, 68, 68, 0.2);
+  outline: none;
+  color: inherit;
+  background: transparent;
+  resize: none;
+}
+
+/* ----- Botões -----*/
+
+#btn {
+  font-size: var(--btn-txt);
+  padding: 50;
+  border: none;
+  background: none;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 0px 0px rgba(68, 68, 68, 0.2);
+}
+
+#btn:hover {
+  color: var(--grey);
+  font-weight: 800 !important;
+  letter-spacing: 0px;
+  background: none;
+  -webkit-box-shadow: 0px 2px 10px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 10px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+  box-shadow: 3px 3px 3px 3px rgba(68, 68, 68, 0.1);
+}
+
+#reset {
+  font-size: var(--btn-txt);
+  padding: 50;
+  border: none;
+  background: none;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 0px 0px rgba(68, 68, 68, 0.2);
+}
+
+#reset:hover {
+  color: ar(--grey);
+  font-weight: 800 !important;
+  letter-spacing: 0px;
+  background: none;
+  -webkit-box-shadow: 0px 2px 10px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 10px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+  box-shadow: 3px 3px 3px 3px rgba(68, 68, 68, 0.1);
+}
+
+button {
+  font-size: 14px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 6px;
+  width: 30%;
+  padding: 3px 0;
+  text-align: center;
+  margin-top: 3px;
+  box-shadow: 2px 2px 0px 0px rgba(68, 68, 68, 0.2);
+}
+
+button:hover {
+  color: ar(--grey);
+  font-weight: 800 !important;
+  letter-spacing: 0px;
+  background: none;
+  -webkit-box-shadow: 0px 2px 10px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 10px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+  box-shadow: 3px 3px 3px 3px rgba(68, 68, 68, 0.1);
+}
+
+/* ----- Footer Config -----*/
+
+.footer {
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ----- Dark Mode -----*/
+.dark-mode {
+  background-color: #191919;
+  color: white;
+}
+
+.dark-mode a {
+  color: #ecb365;
+}
+.dark-mode hr {
+  background-color: #eeeeee;
+}
+
+.switch {
+  position: absolute;
+  margin: auto;
+  top: 10px;
+  right: 0px;
+  width: 150px;
+  text-align: center;
+}
+.inner-switch {
+  position: absolute;
+  border: 2px solid #555555;
+  border-radius: 1.25rem;
+  width: 3.125rem;
+  text-align: center;
+}
+/* Dark Mode End */
