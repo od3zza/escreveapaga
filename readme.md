@@ -9,8 +9,7 @@ Agora com download do conteúdo em arquivo .txt e auto save 👾
 - filesaver por [Eligrey](http://purl.eligrey.com/github/FileSaver.js)
 - Contador de palavras e caracteres com colaboração de [@haizlbliek](https://support.glitch.com/u/haizlbliek/summary)
 
-- Este é um projeto OpenSource, desenhado por [ALBQRQ](https://twitter.com/heyalbqrq),
-  com carinho e muita gratidão pelo js. incorporado e intermediários,
+- Este é um projeto OpenSource, desenhado com carinho e muita gratidão pelo js. incorporado e intermediários,
   sinta-se livre para modificar, aprimorar e principalmente, semear! 🏴
 
 ## Started on [Glitch](https://glitch.com/) and shaped around 💖
